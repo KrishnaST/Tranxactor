@@ -56,7 +56,6 @@ public class LoginController implements Initializable {
 				DashBoarController controller = loader.getController();
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
-				//controller.setParent(root);
 				controller.setStage(stage);
 				stage.show();
 				loginButton.setDisable(false);
