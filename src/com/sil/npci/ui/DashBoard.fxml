@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="585.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sil.npci.ui.DashBoarController">
+   <center>
+      <TableView fx:id="bankTable" style="-fx-background-color: #6b6b6b;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="bankNameCol" prefWidth="140.79998475313187" text="Bank Name" />
+          <TableColumn fx:id="acqIdCol" prefWidth="82.39999389648438" text="Acquirer ID" />
+            <TableColumn fx:id="isAcqCol" prefWidth="93.59999084472656" text="Acquirer" />
+            <TableColumn fx:id="isIssCol" prefWidth="96.79998779296875" text="Issuer" />
+            <TableColumn fx:id="acqIpCol" prefWidth="120.79998779296875" text="Acquiring IP:Port" />
+            <TableColumn fx:id="issIpCol" prefWidth="132.800048828125" text="Issuing IP:Port" />
+            <TableColumn fx:id="cbsIpCol" prefWidth="120.0" text="CBS IP:Port" />
+            <TableColumn fx:id="offsetTypeCol" prefWidth="94.4000244140625" text="Offset Type" />
+            <TableColumn prefWidth="77.5999755859375" text="Status" />
+        </columns>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <VBox prefHeight="60.0" prefWidth="0.0" style="-fx-background-color: #2e354f; -fx-min-height: 60; -fx-max-height: 60;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-min-height: 30; -fx-max-height: 30;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" style="-fx-text-fill: #43bb73;" text="Transaction Router Mission Control">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

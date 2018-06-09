@@ -1,0 +1,541 @@
+[14:41:30:783] NPCIConnector.run(78) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[14:41:30:846] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:31:848] NPCIConnector.run(82) npci socket connection status : false
+[14:41:32:850] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:33:854] NPCIConnector.run(82) npci socket connection status : false
+[14:41:34:855] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:35:857] NPCIConnector.run(82) npci socket connection status : false
+[14:41:36:857] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:37:859] NPCIConnector.run(82) npci socket connection status : false
+[14:41:38:860] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:39:862] NPCIConnector.run(82) npci socket connection status : false
+[14:41:40:862] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:41:864] NPCIConnector.run(82) npci socket connection status : false
+[14:41:42:864] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:43:867] NPCIConnector.run(82) npci socket connection status : false
+[14:41:44:868] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:45:869] NPCIConnector.run(82) npci socket connection status : false
+[14:41:46:869] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:47:872] NPCIConnector.run(82) npci socket connection status : false
+[14:41:48:874] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:49:875] NPCIConnector.run(82) npci socket connection status : false
+[14:41:50:875] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:51:877] NPCIConnector.run(82) npci socket connection status : false
+[14:41:52:877] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:53:883] NPCIConnector.run(82) npci socket connection status : false
+[14:41:54:884] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:55:886] NPCIConnector.run(82) npci socket connection status : false
+[14:41:56:886] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:57:889] NPCIConnector.run(82) npci socket connection status : false
+[14:41:58:889] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:41:59:891] NPCIConnector.run(82) npci socket connection status : false
+[14:42:00:891] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:01:892] NPCIConnector.run(82) npci socket connection status : false
+[14:42:02:893] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:03:895] NPCIConnector.run(82) npci socket connection status : false
+[14:42:04:895] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:05:898] NPCIConnector.run(82) npci socket connection status : false
+[14:42:06:899] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:07:900] NPCIConnector.run(82) npci socket connection status : false
+[14:42:08:900] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:09:902] NPCIConnector.run(82) npci socket connection status : false
+[14:42:10:902] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:11:904] NPCIConnector.run(82) npci socket connection status : false
+[14:42:12:905] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:13:907] NPCIConnector.run(82) npci socket connection status : false
+[14:42:14:907] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:15:909] NPCIConnector.run(82) npci socket connection status : false
+[14:42:16:910] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:17:911] NPCIConnector.run(82) npci socket connection status : false
+[14:42:18:912] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:19:914] NPCIConnector.run(82) npci socket connection status : false
+[14:42:20:914] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:21:914] NPCIConnector.run(82) npci socket connection status : false
+[14:42:22:915] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:23:916] NPCIConnector.run(82) npci socket connection status : false
+[14:42:24:917] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:25:919] NPCIConnector.run(82) npci socket connection status : false
+[14:42:26:919] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:27:922] NPCIConnector.run(82) npci socket connection status : false
+[14:42:28:923] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:29:926] NPCIConnector.run(82) npci socket connection status : false
+[14:42:30:926] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:31:928] NPCIConnector.run(82) npci socket connection status : false
+[14:42:32:928] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:33:929] NPCIConnector.run(82) npci socket connection status : false
+[14:42:34:929] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:35:932] NPCIConnector.run(82) npci socket connection status : false
+[14:42:36:934] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:37:935] NPCIConnector.run(82) npci socket connection status : false
+[14:42:38:935] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:39:937] NPCIConnector.run(82) npci socket connection status : false
+[14:42:40:937] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:41:940] NPCIConnector.run(82) npci socket connection status : false
+[14:42:42:940] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:43:942] NPCIConnector.run(82) npci socket connection status : false
+[14:42:44:943] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:45:945] NPCIConnector.run(82) npci socket connection status : false
+[14:42:46:946] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:47:948] NPCIConnector.run(82) npci socket connection status : false
+[14:42:48:948] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:49:950] NPCIConnector.run(82) npci socket connection status : false
+[14:42:50:951] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:51:953] NPCIConnector.run(82) npci socket connection status : false
+[14:42:52:953] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:53:956] NPCIConnector.run(82) npci socket connection status : false
+[14:42:54:956] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:55:958] NPCIConnector.run(82) npci socket connection status : false
+[14:42:56:958] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:57:960] NPCIConnector.run(82) npci socket connection status : false
+[14:42:58:960] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:42:59:961] NPCIConnector.run(82) npci socket connection status : false
+[14:43:00:962] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:01:964] NPCIConnector.run(82) npci socket connection status : false
+[14:43:02:965] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:03:968] NPCIConnector.run(82) npci socket connection status : false
+[14:43:04:968] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:05:970] NPCIConnector.run(82) npci socket connection status : false
+[14:43:06:971] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:07:972] NPCIConnector.run(82) npci socket connection status : false
+[14:43:08:973] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:09:977] NPCIConnector.run(82) npci socket connection status : false
+[14:43:10:977] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:11:981] NPCIConnector.run(82) npci socket connection status : false
+[14:43:12:982] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:13:984] NPCIConnector.run(82) npci socket connection status : false
+[14:43:14:984] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:15:987] NPCIConnector.run(82) npci socket connection status : false
+[14:43:16:988] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:17:989] NPCIConnector.run(82) npci socket connection status : false
+[14:43:18:990] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:19:992] NPCIConnector.run(82) npci socket connection status : false
+[14:43:20:993] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:21:994] NPCIConnector.run(82) npci socket connection status : false
+[14:43:22:995] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:23:997] NPCIConnector.run(82) npci socket connection status : false
+[14:43:24:998] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:26:001] NPCIConnector.run(82) npci socket connection status : false
+[14:43:27:001] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:28:003] NPCIConnector.run(82) npci socket connection status : false
+[14:43:29:005] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:30:007] NPCIConnector.run(82) npci socket connection status : false
+[14:43:31:008] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:32:010] NPCIConnector.run(82) npci socket connection status : false
+[14:43:33:010] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:34:012] NPCIConnector.run(82) npci socket connection status : false
+[14:43:35:014] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:36:017] NPCIConnector.run(82) npci socket connection status : false
+[14:43:37:018] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:38:019] NPCIConnector.run(82) npci socket connection status : false
+[14:43:39:019] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:40:022] NPCIConnector.run(82) npci socket connection status : false
+[14:43:41:023] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:42:026] NPCIConnector.run(82) npci socket connection status : false
+[14:43:43:026] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:44:027] NPCIConnector.run(82) npci socket connection status : false
+[14:43:45:028] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:46:030] NPCIConnector.run(82) npci socket connection status : false
+[14:43:47:031] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:48:032] NPCIConnector.run(82) npci socket connection status : false
+[14:43:49:033] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:50:034] NPCIConnector.run(82) npci socket connection status : false
+[14:43:51:035] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:52:037] NPCIConnector.run(82) npci socket connection status : false
+[14:43:53:038] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:54:041] NPCIConnector.run(82) npci socket connection status : false
+[14:43:55:042] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:56:044] NPCIConnector.run(82) npci socket connection status : false
+[14:43:57:045] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:43:58:046] NPCIConnector.run(82) npci socket connection status : false
+[14:43:59:047] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:00:049] NPCIConnector.run(82) npci socket connection status : false
+[14:44:01:050] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:02:052] NPCIConnector.run(82) npci socket connection status : false
+[14:44:03:053] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:04:055] NPCIConnector.run(82) npci socket connection status : false
+[14:44:05:056] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:06:059] NPCIConnector.run(82) npci socket connection status : false
+[14:44:07:060] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:08:062] NPCIConnector.run(82) npci socket connection status : false
+[14:44:09:063] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:10:065] NPCIConnector.run(82) npci socket connection status : false
+[14:44:11:065] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:12:066] NPCIConnector.run(82) npci socket connection status : false
+[14:44:13:067] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:14:069] NPCIConnector.run(82) npci socket connection status : false
+[14:44:15:069] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:16:070] NPCIConnector.run(82) npci socket connection status : false
+[14:44:17:071] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:18:073] NPCIConnector.run(82) npci socket connection status : false
+[14:44:19:073] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:20:075] NPCIConnector.run(82) npci socket connection status : false
+[14:44:21:076] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:22:076] NPCIConnector.run(82) npci socket connection status : false
+[14:44:23:076] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:24:078] NPCIConnector.run(82) npci socket connection status : false
+[14:44:25:079] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:26:081] NPCIConnector.run(82) npci socket connection status : false
+[14:44:27:081] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:28:082] NPCIConnector.run(82) npci socket connection status : false
+[14:44:29:082] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:30:084] NPCIConnector.run(82) npci socket connection status : false
+[14:44:31:084] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:32:085] NPCIConnector.run(82) npci socket connection status : false
+[14:44:33:085] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:34:086] NPCIConnector.run(82) npci socket connection status : false
+[14:44:35:087] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:36:088] NPCIConnector.run(82) npci socket connection status : false
+[14:44:37:088] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:38:091] NPCIConnector.run(82) npci socket connection status : false
+[14:44:39:091] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:40:094] NPCIConnector.run(82) npci socket connection status : false
+[14:44:41:096] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:42:099] NPCIConnector.run(82) npci socket connection status : false
+[14:44:43:099] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:44:101] NPCIConnector.run(82) npci socket connection status : false
+[14:44:45:102] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:46:103] NPCIConnector.run(82) npci socket connection status : false
+[14:44:47:104] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:48:106] NPCIConnector.run(82) npci socket connection status : false
+[14:44:49:106] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:50:108] NPCIConnector.run(82) npci socket connection status : false
+[14:44:51:108] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:52:111] NPCIConnector.run(82) npci socket connection status : false
+[14:44:53:112] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:54:114] NPCIConnector.run(82) npci socket connection status : false
+[14:44:55:115] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:56:117] NPCIConnector.run(82) npci socket connection status : false
+[14:44:57:118] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:44:58:120] NPCIConnector.run(82) npci socket connection status : false
+[14:44:59:121] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:00:123] NPCIConnector.run(82) npci socket connection status : false
+[14:45:01:124] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:02:126] NPCIConnector.run(82) npci socket connection status : false
+[14:45:03:126] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:04:128] NPCIConnector.run(82) npci socket connection status : false
+[14:45:05:129] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:06:131] NPCIConnector.run(82) npci socket connection status : false
+[14:45:07:132] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:08:133] NPCIConnector.run(82) npci socket connection status : false
+[14:45:09:134] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:10:136] NPCIConnector.run(82) npci socket connection status : false
+[14:45:11:136] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:12:138] NPCIConnector.run(82) npci socket connection status : false
+[14:45:13:139] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:14:141] NPCIConnector.run(82) npci socket connection status : false
+[14:45:15:142] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:16:144] NPCIConnector.run(82) npci socket connection status : false
+[14:45:17:144] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:18:146] NPCIConnector.run(82) npci socket connection status : false
+[14:45:19:146] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:20:148] NPCIConnector.run(82) npci socket connection status : false
+[14:45:21:148] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:22:151] NPCIConnector.run(82) npci socket connection status : false
+[14:45:23:152] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:24:154] NPCIConnector.run(82) npci socket connection status : false
+[14:45:25:154] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:26:157] NPCIConnector.run(82) npci socket connection status : false
+[14:45:27:157] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:28:159] NPCIConnector.run(82) npci socket connection status : false
+[14:45:29:160] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:30:161] NPCIConnector.run(82) npci socket connection status : false
+[14:45:31:162] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:32:163] NPCIConnector.run(82) npci socket connection status : false
+[14:45:33:164] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:34:166] NPCIConnector.run(82) npci socket connection status : false
+[14:45:35:166] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:36:166] NPCIConnector.run(82) npci socket connection status : false
+[14:45:37:166] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:38:168] NPCIConnector.run(82) npci socket connection status : false
+[14:45:39:169] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:40:169] NPCIConnector.run(82) npci socket connection status : false
+[14:45:41:170] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:42:171] NPCIConnector.run(82) npci socket connection status : false
+[14:45:43:171] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:44:173] NPCIConnector.run(82) npci socket connection status : false
+[14:45:45:174] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:46:176] NPCIConnector.run(82) npci socket connection status : false
+[14:45:47:176] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:48:178] NPCIConnector.run(82) npci socket connection status : false
+[14:45:49:179] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:50:181] NPCIConnector.run(82) npci socket connection status : false
+[14:45:51:181] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:52:182] NPCIConnector.run(82) npci socket connection status : false
+[14:45:53:182] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:54:184] NPCIConnector.run(82) npci socket connection status : false
+[14:45:55:185] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:56:188] NPCIConnector.run(82) npci socket connection status : false
+[14:45:57:188] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:45:58:191] NPCIConnector.run(82) npci socket connection status : false
+[14:45:59:191] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:00:194] NPCIConnector.run(82) npci socket connection status : false
+[14:46:01:195] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:02:196] NPCIConnector.run(82) npci socket connection status : false
+[14:46:03:196] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:04:196] NPCIConnector.run(82) npci socket connection status : false
+[14:46:05:197] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:06:198] NPCIConnector.run(82) npci socket connection status : false
+[14:46:07:199] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:08:201] NPCIConnector.run(82) npci socket connection status : false
+[14:46:09:201] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:10:204] NPCIConnector.run(82) npci socket connection status : false
+[14:46:11:204] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[14:46:11:205] NPCIConnector.run(82) npci socket connection status : true
+[14:46:26:695] NPCIConnector.run(98) message from npci : 303830308220000000000000040000000000000030353331303931363236303030303031303031
+[14:46:26:695] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0800'                                              |007 : '0531091626'                                        |
+|011 : '000001'                                            |070 : '001'                                               |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:46:32:015] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134343633313538333938394349333031
+[14:46:32:015] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531144631'                                        |
+|011 : '583989'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:46:32:016] NPCIConnector.run(141) false
+[14:47:22:022] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134343732313831333132344349333031
+[14:47:22:023] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531144721'                                        |
+|011 : '813124'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:47:22:023] NPCIConnector.run(141) false
+[14:48:12:420] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134343831313336363137304349333031
+[14:48:12:420] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531144811'                                        |
+|011 : '366170'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:48:12:420] NPCIConnector.run(141) false
+[14:49:02:916] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134343930313232383438364349333031
+[14:49:02:916] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531144901'                                        |
+|011 : '228486'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:49:02:916] NPCIConnector.run(141) false
+[14:49:51:977] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134343935313631323932344349333031
+[14:49:51:977] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531144951'                                        |
+|011 : '612924'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:49:51:977] NPCIConnector.run(141) false
+[14:50:42:005] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134353034313931363233334349333031
+[14:50:42:005] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531145041'                                        |
+|011 : '916233'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:50:42:005] NPCIConnector.run(141) false
+[14:51:32:033] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134353133313234363635304349333031
+[14:51:32:033] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531145131'                                        |
+|011 : '246650'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:51:32:033] NPCIConnector.run(141) false
+[14:52:22:043] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313134353232313533323839354349333031
+[14:52:22:043] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531145221'                                        |
+|011 : '532895'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[14:52:22:043] NPCIConnector.run(141) false
+[23:18:18:743] NPCIConnector.run(78) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[23:18:18:853] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[23:18:18:853] NPCIConnector.run(82) npci socket connection status : true
+[23:18:24:478] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233313832343835383230384349303031
+[23:18:24:478] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531231824'                                        |
+|011 : '858208'                                            |039 : 'CI'                                                |
+|070 : '001'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:18:24:478] NPCIConnector.run(141) false
+[23:18:34:505] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233313833343130373435383030303031
+[23:18:34:505] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531231834'                                        |
+|011 : '107458'                                            |039 : '00'                                                |
+|070 : '001'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:18:34:506] NPCIConnector.run(141) false
+[23:18:39:800] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233313833393831393938334349333031
+[23:18:39:800] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531231839'                                        |
+|011 : '819983'                                            |039 : 'CI'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:18:39:800] NPCIConnector.run(141) false
+[23:18:59:936] NPCIConnector.run(98) message from npci : 303230307238648129E19008313636303737393930303230303030303131303030303030303030303030303630303030303533313137343835393030303030343233313835393035333135393939333536393031303030363732303030313334363037373939303032303030303031313D32303035323035363530303030303030303831353132333030303030343230355445535431323334544553543132333435363738393031525550415920544553542053494D554C41544F522020204D554D424149202020202020204D48494E303232303531303035504F5330313035383030353030303330333536383234373946393730373532353335303034313432303031323232303033393030303435323031324156454E55452053555045524D41525420494E44
+[23:18:59:937] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0200'                                              |002 : '6077990020000011'                                  |
+|003 : '000000'                                            |004 : '000000060000'                                      |
+|007 : '0531174859'                                        |011 : '000004'                                            |
+|012 : '231859'                                            |013 : '0531'                                              |
+|018 : '5999'                                              |019 : '356'                                               |
+|022 : '901'                                               |025 : '00'                                                |
+|032 : '720001'                                            |035 : '6077990020000011=20052056500000000'                |
+|037 : '815123000004'                                      |040 : '205'                                               |
+|041 : 'TEST1234'                                          |042 : 'TEST12345678901'                                   |
+|043 : 'RUPAY TEST SIMULATOR   MUMBAI       MHIN'          |048 : '051005POS0105800500030'                            |
+|049 : '356'                                               |052 : '82479F9707525350'                                  |
+|061 : '420012220039000452012AVENUE SUPERMART IND'         |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:24:25:216] NPCIConnector.run(78) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[23:24:25:338] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[23:24:25:339] NPCIConnector.run(82) npci socket connection status : true
+[23:24:30:719] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233323433303537383132373030303031
+[23:24:30:720] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531232430'                                        |
+|011 : '578127'                                            |039 : '00'                                                |
+|070 : '001'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:24:30:720] NPCIConnector.run(141) false
+[23:24:35:994] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233323433353832343431303030333031
+[23:24:35:994] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531232435'                                        |
+|011 : '824410'                                            |039 : '00'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:24:35:994] NPCIConnector.run(141) false
+[23:24:49:919] NPCIConnector.run(98) message from npci : 303230307238648129E19008313636303737393930303230303030303131303030303030303030303030303630303030303533313137353434393030303030373233323434393035333135393939333536393031303030363732303030313334363037373939303032303030303031313D32303035323035363530303030303030303831353132333030303030373230355445535431323334544553543132333435363738393031525550415920544553542053494D554C41544F522020204D554D424149202020202020204D48494E303232303531303035504F5330313035383030353030303330333536383234373946393730373532353335303034313432303031323232303033393030303435323031324156454E55452053555045524D41525420494E44
+[23:24:49:919] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0200'                                              |002 : '6077990020000011'                                  |
+|003 : '000000'                                            |004 : '000000060000'                                      |
+|007 : '0531175449'                                        |011 : '000007'                                            |
+|012 : '232449'                                            |013 : '0531'                                              |
+|018 : '5999'                                              |019 : '356'                                               |
+|022 : '901'                                               |025 : '00'                                                |
+|032 : '720001'                                            |035 : '6077990020000011=20052056500000000'                |
+|037 : '815123000007'                                      |040 : '205'                                               |
+|041 : 'TEST1234'                                          |042 : 'TEST12345678901'                                   |
+|043 : 'RUPAY TEST SIMULATOR   MUMBAI       MHIN'          |048 : '051005POS0105800500030'                            |
+|049 : '356'                                               |052 : '82479F9707525350'                                  |
+|061 : '420012220039000452012AVENUE SUPERMART IND'         |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:33:47:953] NPCIConnector.run(78) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[23:33:48:034] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[23:33:48:034] NPCIConnector.run(82) npci socket connection status : true
+[23:33:53:383] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233333335333935333336343030303031
+[23:33:53:383] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531233353'                                        |
+|011 : '953364'                                            |039 : '00'                                                |
+|070 : '001'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:33:53:383] NPCIConnector.run(141) false
+[23:33:58:651] NPCIConnector.run(98) message from npci : 3038313082200000020000000400000000000000303533313233333335383933373432333030333031
+[23:33:58:651] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0810'                                              |007 : '0531233358'                                        |
+|011 : '937423'                                            |039 : '00'                                                |
+|070 : '301'                                               |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+
+[23:33:58:651] NPCIConnector.run(141) false
+[23:34:10:574] NPCIConnector.run(98) message from npci : 303230307238648129E19008313636303737393930303230303030303131303030303030303030303030303630303030303533313138303431303030303031303233333431303035333135393939333536393031303030363732303030313334363037373939303032303030303031313D32303035323035363530303030303030303831353132333030303031303230355445535431323334544553543132333435363738393031525550415920544553542053494D554C41544F522020204D554D424149202020202020204D48494E303232303531303035504F5330313035383030353030303330333536383234373946393730373532353335303034313432303031323232303033393030303435323031324156454E55452053555045524D41525420494E44
+[23:34:10:575] NPCIConnector.run(102) message from npci : 
+-----------------------------------------------------------------------------------------------------------------------
+|000 : '0200'                                              |002 : '6077990020000011'                                  |
+|003 : '000000'                                            |004 : '000000060000'                                      |
+|007 : '0531180410'                                        |011 : '000010'                                            |
+|012 : '233410'                                            |013 : '0531'                                              |
+|018 : '5999'                                              |019 : '356'                                               |
+|022 : '901'                                               |025 : '00'                                                |
+|032 : '720001'                                            |035 : '6077990020000011=20052056500000000'                |
+|037 : '815123000010'                                      |040 : '205'                                               |
+|041 : 'TEST1234'                                          |042 : 'TEST12345678901'                                   |
+|043 : 'RUPAY TEST SIMULATOR   MUMBAI       MHIN'          |048 : '051005POS0105800500030'                            |
+|049 : '356'                                               |052 : '82479F9707525350'                                  |
+|061 : '420012220039000452012AVENUE SUPERMART IND'         |                                                          |
+-----------------------------------------------------------------------------------------------------------------------
+

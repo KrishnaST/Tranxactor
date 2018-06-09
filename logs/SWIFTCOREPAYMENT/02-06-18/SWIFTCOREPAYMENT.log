@@ -1,0 +1,311 @@
+[00:35:27:177] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[00:35:27:278] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[00:35:27:278] NPCIConnector.run(81) npci socket connection status : true
+[00:35:29:649] NPCIConnector.run(97) message from npci : 3038313082200000020000000400000000000000303630323030333532393532303234363030303031
+[00:35:29:650] NPCIConnector.run(140) false
+[00:40:29:610] NPCIConnector.run(97) message from npci : 3038313082200000020000000400000000000000303630323030343032393230363637354349333031
+[00:40:29:610] NPCIConnector.run(140) false
+[00:43:48:826] NPCIConnector.run(97) message from npci : 303230307238668129E19208313636363737383830303030303030303034303031303030303030303030303630303030303630313139313334383030303437373030343334383036303235393939333536303531303031303030363732303030313336363637373838303030303030303030343D303332373632303632333030303030303030303831353330303030303437373632305445535431323334544553543132333435363738393031525550415920544553542053494D554C41544F522020204D554D424149202020202020204D48494E303232303531303035504F5330313035383030353030303330333536443238453033373239354141443534443133385F2A020356820238008407A00000052410109A031709119C01099F02060000000310009F03060000000300009F090200649F1A0203569F1E08303030314D5836359F10080105A080010400009F2608752A16E8DF823BBB9F2701809F3303E0F0C89F34030200009F3501229F360200199F370451997DC19F410400013414950500000480009F0702AB803034313432313131323332313033393030303435323031324156454E55452053555045524D41525420494E44
+[15:25:23:675] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:25:23:732] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:25:23:733] NPCIConnector.run(81) npci socket connection status : true
+[15:26:01:469] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:26:01:544] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:26:01:544] NPCIConnector.run(81) npci socket connection status : true
+[15:27:40:591] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:27:40:693] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:27:40:693] NPCIConnector.run(81) npci socket connection status : true
+[15:33:55:257] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:33:55:345] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:33:55:345] NPCIConnector.run(81) npci socket connection status : true
+[15:34:34:326] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:34:34:399] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:34:34:400] NPCIConnector.run(81) npci socket connection status : true
+[15:52:25:765] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[15:52:25:831] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[15:52:25:831] NPCIConnector.run(81) npci socket connection status : true
+[16:05:31:627] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:05:31:740] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:05:31:740] NPCIConnector.run(81) npci socket connection status : true
+[16:10:53:433] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:10:53:523] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:10:53:523] NPCIConnector.run(81) npci socket connection status : true
+[16:11:15:027] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:11:15:164] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:11:15:164] NPCIConnector.run(81) npci socket connection status : true
+[16:13:43:873] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:13:43:935] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:13:43:936] NPCIConnector.run(81) npci socket connection status : true
+[16:32:59:063] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:32:59:151] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:32:59:152] NPCIConnector.run(81) npci socket connection status : true
+[16:35:11:408] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:35:11:498] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:35:11:498] NPCIConnector.run(81) npci socket connection status : true
+[16:35:32:649] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:35:32:733] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:35:32:733] NPCIConnector.run(81) npci socket connection status : true
+[16:36:31:517] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:36:31:603] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:36:31:603] NPCIConnector.run(81) npci socket connection status : true
+[16:58:02:404] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:58:02:473] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:58:02:474] NPCIConnector.run(81) npci socket connection status : true
+[16:58:30:228] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[16:58:30:323] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[16:58:30:323] NPCIConnector.run(81) npci socket connection status : true
+[17:00:54:325] NPCIConnector.run(77) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[17:00:54:391] NPCIConnector.initSocket(237) connection to 10.101.10.236:1234
+[17:00:54:391] NPCIConnector.run(81) npci socket connection status : true

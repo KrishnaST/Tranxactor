@@ -1,0 +1,45 @@
+[18:33:37:997] NPCIConnector.run(78) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[18:33:38:086] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:38:087] NPCIConnector.run(82) npci socket connection status : true
+[18:33:40:217] NPCIConnector.receive(206) unexpected socket break
+[18:33:40:218] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:40:218] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:40:219] NPCIConnector.run(82) npci socket connection status : true
+[18:33:42:229] NPCIConnector.receive(206) unexpected socket break
+[18:33:42:229] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:42:230] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:42:230] NPCIConnector.run(82) npci socket connection status : true
+[18:33:44:141] NPCIConnector.receive(216) error receiving message from npci socketexception : Connection reset
+[18:33:44:142] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:44:142] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:44:142] NPCIConnector.run(82) npci socket connection status : true
+[18:33:46:153] NPCIConnector.receive(206) unexpected socket break
+[18:33:46:153] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:46:154] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:46:154] NPCIConnector.run(82) npci socket connection status : true
+[18:33:48:165] NPCIConnector.receive(206) unexpected socket break
+[18:33:48:166] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:48:166] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:48:166] NPCIConnector.run(82) npci socket connection status : true
+[18:33:50:178] NPCIConnector.receive(206) unexpected socket break
+[18:33:50:178] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:50:179] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:50:179] NPCIConnector.run(82) npci socket connection status : true
+[18:33:52:190] NPCIConnector.receive(206) unexpected socket break
+[18:33:52:190] NPCIConnector.run(93) continue to main either sockbreak
+[18:33:52:191] NPCIConnector.initSocket(238) connection to 10.101.10.236:1234
+[18:33:52:191] NPCIConnector.run(82) npci socket connection status : true
