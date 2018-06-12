@@ -1,0 +1,89 @@
+[12:48:21:604] NPCIConnector.run(79) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[12:48:21:687] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:21:688] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:22:290] NPCIConnector.run(93) {}
+[12:48:24:093] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:24:093] NPCIConnector.run(93) {}
+[12:48:24:093] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:24:094] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:24:094] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:24:094] NPCIConnector.run(93) {}
+[12:48:25:401] Thread-3 NPCIConnector.receive(218) error receiving message from npci socketexception : Connection reset
+[12:48:25:401] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:25:401] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:25:401] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:25:402] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:25:402] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:27:417] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:27:417] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:27:417] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:27:417] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:27:418] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:27:418] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:29:496] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:29:497] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:29:497] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:29:497] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:29:498] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:29:498] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:31:506] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:31:506] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:31:507] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:31:507] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:31:507] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:31:508] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:33:516] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:33:516] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:33:517] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:33:517] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:33:517] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:33:518] NPCIConnector.run(93) {1686193565=Thread[acqlogon,5,main]}
+[12:48:35:527] Thread-3 NPCIConnector.receive(208) unexpected socket break
+[12:48:35:527] NPCIConnector.run(93) {}
+[12:48:35:527] Thread-3 NPCIConnector.run(95) continue to main either sockbreak
+[12:48:35:528] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:48:35:528] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:48:35:529] NPCIConnector.run(93) {}
+[12:48:54:791] Thread-3 NPCIConnector.run(100) message from npci : 3038313082200000020000000400000000000000303631313132343835343434323532383030303031
+[12:48:54:792] NPCIConnector.run(143) false
+[12:48:54:792] NPCIConnector.run(93) {}
+[12:49:19:883] Thread-3 NPCIConnector.receive(218) error receiving message from npci socketexception : Socket closed
+[12:49:19:884] Thread-3 NPCIConnector.run(162) shutting down npci connector
+[12:49:19:884] acq server AcquirerServer.run(317) shutting down acquirer server.
+[12:49:42:021] NPCIConnector.run(79) {
+  "acquirerId": "607742",
+  "bankName": "SWIFTCOREPAYMENT",
+  "isAcquirer": true,
+  "isIssuer": true,
+  "acquiringIp": "10.100.10.141",
+  "acquiringPort": 6789,
+  "cbsIp": "10.101.10.236",
+  "cbsPort": 9200,
+  "npciIp": "10.101.10.236",
+  "npciPort": 1234,
+  "dataSourceName": "SWIFTCOREPAYMENT",
+  "offsetType": "IBM",
+  "isActive": false
+}
+[12:49:42:116] Thread-3 NPCIConnector.initSocket(240) connection to 10.101.10.236:1234
+[12:49:42:117] Thread-3 NPCIConnector.run(83) npci socket connection status : true
+[12:49:42:166] NPCIConnector.run(93) {}
+[12:49:44:505] Thread-3 NPCIConnector.run(100) message from npci : 3038313082200000020000000400000000000000303631313132343934343132383339303030303031
+[12:49:44:505] NPCIConnector.run(143) false
+[12:49:44:506] NPCIConnector.run(93) {}
+[12:50:43:573] Thread-3 NPCIConnector.run(100) message from npci : 303230307238648129E19008313636303737393930303230303030303131303030303030303030303030303630303030303631313037323034333030303030313132353034333036313135393939333536393031303030363732303030313334363037373939303032303030303031313D32303035323035363530303030303030303831363231323030303030313230355445535431323334544553543132333435363738393031525550415920544553542053494D554C41544F522020204D554D424149202020202020204D48494E303232303531303035504F5330313035383030353030303330333536333442354237424135323336373441303034313432303031323232303033393030303435323031324156454E55452053555045524D41525420494E44
+[12:50:43:599] NPCIConnector.run(93) {}
