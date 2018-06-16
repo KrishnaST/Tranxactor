@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.HashSet;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -36,8 +37,14 @@ import com.sil.npci.nanolog.LoggerFactory;
 import com.sil.npci.util.ByteHexUtil;
 import com.zaxxer.hikari.HikariDataSource;
 
-public class NPCIConnector extends Thread implements Shutdownable {
+public final class NPCIConnector extends Thread implements Shutdownable {
 
+	private final ConcurrentHashMap<String, AcquirerTransaction> finmap = new ConcurrentHashMap<>(20);
+	private final ConcurrentHashMap<String, AcquirerTransaction> revmap = new ConcurrentHashMap<>(5);
+	private final ConcurrentHashMap<String, AcquirerTransaction> netmap = new ConcurrentHashMap<>(3);
+	
+	public final HashSet<String> binset = new HashSet<>();
+	
 	private final Bank config;
 	private final LoggerFactory loggerFactory;
 	private final Logger npciLogger;
@@ -57,11 +64,7 @@ public class NPCIConnector extends Thread implements Shutdownable {
 	private final ScheduledThreadPoolExecutor schedular = new ScheduledThreadPoolExecutor(1);	
 	private ScheduledFuture<?> future = null;
 
-	private final ConcurrentHashMap<String, AcquirerTransaction> finmap = new ConcurrentHashMap<>(20);
-	private final ConcurrentHashMap<String, AcquirerTransaction> revmap = new ConcurrentHashMap<>(5);
-	private final ConcurrentHashMap<String, AcquirerTransaction> netmap = new ConcurrentHashMap<>(3);
-	
-	private final AcquirerServer acquirerServer = new AcquirerServer();
+	private final AcquirerServer acquirerServer;
 	
 	public NPCIConnector(Bank config, HikariDataSource ds, CBSConnector cbcon) {
 		this.config = config;
@@ -70,8 +73,10 @@ public class NPCIConnector extends Thread implements Shutdownable {
 		loggerFactory = new LoggerFactory(config.getBankName());
 		npciLogger = new Logger(config.getBankName(), config.getBankName());
 		schedular.setRemoveOnCancelPolicy(true);
+		acquirerServer = new AcquirerServer(config.getBankName());;
 	}
 
+	 
 	
 	public void run() {
 		acquirerServer.setName("acq server");
@@ -304,6 +309,9 @@ public class NPCIConnector extends Thread implements Shutdownable {
 
 	public class AcquirerServer extends Thread implements Shutdownable {
 		private ServerSocket ssc = null;
+		public AcquirerServer(String bankName) {
+			this.setName(bankName+" acquirer");
+		}
 		public void run() {
 			try(ServerSocket ssc = new ServerSocket(config.getAcquiringPort())) {
 				this.ssc = ssc;
