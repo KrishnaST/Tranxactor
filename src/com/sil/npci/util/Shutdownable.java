@@ -1,4 +1,4 @@
-package com.sil.npci.interfaces;
+package com.sil.npci.util;
 
 
 public interface Shutdownable {

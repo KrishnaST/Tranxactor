@@ -17,21 +17,8 @@ public class SILCBSConnector extends CBSConnector{
 		super(cbsIp, cbsPort);
 	}
 
-	/**
-	-----------------------------------------------------------------------------------------------------------------------
-	|000 : '0200'                                              |002 : '6077990020000011'                                  |
-	|003 : '000000'                                            |004 : '000000060000'                                      |
-	|007 : '0529080731'                                        |011 : '000001'                                            |
-	|012 : '133731'                                            |013 : '0529'                                              |
-	|019 : '356'                                               |032 : '720001'                                            |
-	|037 : '814913000001'                                      |041 : 'TEST1234'                                          |
-	|049 : '356'                                               |102 : '0002SB    00079250'                                |
-	-----------------------------------------------------------------------------------------------------------------------
-	**/
-	
 	@Override
 	public void send(CBSRequest cbsreq, CBSResponse cbsres, Logger logger) {
-		
 		logger.log(GlobalConfig.GSON_BUILDER.create().toJson(cbsreq));
 		cbsres.responsecode = "91";
 		ISO8583Message cbsreqiso = new ISO8583Message();
@@ -78,49 +65,16 @@ public class SILCBSConnector extends CBSConnector{
 		}
 	}
 	
-	@Override
-	public ISO8583Message send(ISO8583Message issuerRequest, ISO8583Message cbsRequest, Logger logger) {
-		cbsRequest.put(0, issuerRequest.get(0));
-		cbsRequest.put(2, issuerRequest.get(2));
-		cbsRequest.put(3, issuerRequest.get(3));
-		cbsRequest.put(4, issuerRequest.get(4));
-		cbsRequest.put(11, issuerRequest.get(11));
-		cbsRequest.put(12, issuerRequest.get(12));
-		cbsRequest.put(13, issuerRequest.get(13));
-		cbsRequest.put(19, issuerRequest.get(19));
-		cbsRequest.put(32, issuerRequest.get(32));
-		cbsRequest.put(37, issuerRequest.get(37));
-		cbsRequest.put(41, issuerRequest.get(41));
-		cbsRequest.put(49, issuerRequest.get(49));
-		cbsRequest.put(102, issuerRequest.get(102));
-		logger.log(NPCIEncoderDecoder.log(cbsRequest));
-		try(Socket socket = new Socket(cbsIp, cbsPort);
-			BufferedInputStream bin = new BufferedInputStream(socket.getInputStream());
-			BufferedOutputStream bos = new BufferedOutputStream(socket.getOutputStream()))
-		{
-			socket.setSoTimeout(100000);
-			byte[] requestBytes = CBSEncoderDecoder.encode(cbsRequest);
-			logger.log("cbs request : "+ByteHexUtil.byteToHex(requestBytes));
-			bos.write(requestBytes);
-			bos.flush();
-			int b1 = bin.read();
-			int b2 = bin.read();
-			int b3 = bin.read();
-			int b4 = bin.read();
-			int len = Integer.parseInt(new String(new byte[] {(byte) b1, (byte) b2, (byte) b3, (byte) b4}));
-			byte[] responseBytes = new byte[len];
-			bin.read(responseBytes);
-			logger.log("cbs response : "+ByteHexUtil.byteToHex(responseBytes));
-			ISO8583Message cbsResponse = CBSEncoderDecoder.decode(responseBytes);
-			logger.log(NPCIEncoderDecoder.log(cbsResponse));
-			return cbsResponse;
-		} catch (Exception e) {
-			logger.log("null or invalid cbs response : "+e.getMessage());
-		}
-		return null;
-	}
-
 	/**
+	-----------------------------------------------------------------------------------------------------------------------
+	|000 : '0200'                                              |002 : '6077990020000011'                                  |
+	|003 : '000000'                                            |004 : '000000060000'                                      |
+	|007 : '0529080731'                                        |011 : '000001'                                            |
+	|012 : '133731'                                            |013 : '0529'                                              |
+	|019 : '356'                                               |032 : '720001'                                            |
+	|037 : '814913000001'                                      |041 : 'TEST1234'                                          |
+	|049 : '356'                                               |102 : '0002SB    00079250'                                |
+	-----------------------------------------------------------------------------------------------------------------------
 	-----------------------------------------------------------------------------------------------------------------------
 	|000 : '0210'                                              |002 : '6077990020000011'                                  |
 	|003 : '000000'                                            |004 : '000000060000'                                      |

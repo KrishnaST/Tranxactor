@@ -18,7 +18,6 @@ import com.sil.npci.acquirer.AcquirerLogon;
 import com.sil.npci.acquirer.AcquirerTransaction;
 import com.sil.npci.cbs.CBSConnector;
 import com.sil.npci.config.Bank;
-import com.sil.npci.interfaces.Shutdownable;
 import com.sil.npci.iso8583.CBSEncoderDecoder;
 import com.sil.npci.iso8583.ISO8583Message;
 import com.sil.npci.iso8583.NPCIEncoderDecoder;
@@ -34,6 +33,7 @@ import com.sil.npci.issuer.QuickEMVPurchase;
 import com.sil.npci.nanolog.Logger;
 import com.sil.npci.nanolog.LoggerFactory;
 import com.sil.npci.util.ByteHexUtil;
+import com.sil.npci.util.Shutdownable;
 import com.zaxxer.hikari.HikariDataSource;
 
 public final class NPCIConnector extends Thread implements Shutdownable {
