@@ -47,7 +47,6 @@ public abstract class IssuerTransaction extends Thread{
 	public final void run() {
 		try(Connection connection = this.dbcon;
 			Logger logger = npcon.getLogger(issreq.get(37))) {
-			
 			logger.log("issuer class name : "+this.getClass().getName());
 			this.logger = logger;
 			logger.log("issuerRequest : "+NPCIEncoderDecoder.log(issreq));

@@ -88,23 +88,23 @@ public class DashBoarController implements Initializable {
 		connectors = new NPCIConnector[banks.size()];
 		for (int i = 0; i < connectors.length; i++) {
 			Bank bank = banks.get(i);
-			HikariDataSource dataSource = dataSources.get(bank.getBankName());
+			HikariDataSource dataSource = dataSources.get(bank.bankName);
 			if (dataSource == null) {
-				dataSource = DataSourceUtil.getDataSource(bank.getBankName());
-				dataSources.put(bank.getDataSourceName(), dataSource);
-				dataSourceRefCount.put(bank.getDataSourceName(), 2);
+				dataSource = DataSourceUtil.getDataSource(bank.bankName);
+				dataSources.put(bank.dataSourceName, dataSource);
+				dataSourceRefCount.put(bank.dataSourceName, 2);
 			}
-			else dataSourceRefCount.put(bank.getDataSourceName(), dataSourceRefCount.get(bank.getDataSourceName())+1);
-			SILCBSConnector cbcon = new SILCBSConnector(bank.getCbsIp(), bank.getCbsPort());
+			else dataSourceRefCount.put(bank.dataSourceName, dataSourceRefCount.get(bank.dataSourceName)+1);
+			SILCBSConnector cbcon = new SILCBSConnector(bank.cbsIp, bank.cbsPort);
 			connectors[i] = new NPCIConnector(bank, dataSource, cbcon);
 			BankProperty bankProperty = new BankProperty();
-	    	bankProperty.setBankName(bank.getBankName());
-	    	bankProperty.setAcqId(bank.getAcquirerId());
-	    	bankProperty.setAcqIp(bank.getAcquiringIp()+":"+bank.getAcquiringPort());
-	    	bankProperty.setCbsIp(bank.getCbsIp()+":"+bank.getCbsPort());
-	    	bankProperty.setIssIp(bank.getNpciIp()+":"+bank.getNpciPort());
-	    	bankProperty.setIsIss(bank.isIssuer() ? "Y" : "N");
-	    	bankProperty.setIsAcq(bank.isAcquirer() ? "Y" : "N");
+	    	bankProperty.setBankName(bank.bankName);
+	    	bankProperty.setAcqId(bank.acquirerId);
+	    	bankProperty.setAcqIp(bank.acquiringIp+":"+bank.acquiringPort);
+	    	bankProperty.setCbsIp(bank.cbsIp+":"+bank.cbsPort);
+	    	bankProperty.setIssIp(bank.npciIp+":"+bank.npciPort);
+	    	bankProperty.setIsIss(bank.isIssuer ? "Y" : "N");
+	    	bankProperty.setIsAcq(bank.isAcquirer ? "Y" : "N");
 	    	bankProperty.setOffsetType("IBM");
 	    	DashBoarController.banks.add(bankProperty);
 			connectors[i].start();
@@ -146,14 +146,27 @@ public class DashBoarController implements Initializable {
 	public class StartAction implements EventHandler<ActionEvent> {
 		@Override
 		public void handle(ActionEvent event) {
+			int index = -1;
 			BankProperty bankProperty =  bankTable.getSelectionModel().getSelectedItem();
 			if(bankProperty == null) return;
-			NPCIConnector connector = null;
 			for (int i = 0; i < connectors.length; i++) {
-				if(connectors[i].getConfig().getAcquirerId().equalsIgnoreCase(bankProperty.getAcqId())) connector = connectors[i];
+				if(connectors[i].config.acquirerId.equalsIgnoreCase(bankProperty.getAcqId())) index = i;
 			}
+			if(index < 0) return;
+			NPCIConnector connector = connectors[index];
 			if(connector == null) return;
 			if(connector.isAlive() && !connector.isInterrupted()) showAlert(AlertType.WARNING, "Start NPCI Connector", "NPCI Connector Already Started", "NPCI Connector Already Started");
+			else {
+				HikariDataSource dataSource = dataSources.get(connector.config.bankName);
+				if (dataSource == null) {
+					dataSource = DataSourceUtil.getDataSource(connector.config.bankName);
+					dataSources.put(connector.config.dataSourceName, dataSource);
+					dataSourceRefCount.put(connector.config.dataSourceName, 2);
+				}
+				else dataSourceRefCount.put(connector.config.dataSourceName, dataSourceRefCount.get(connector.config.dataSourceName)+1);
+				connectors[index] = new NPCIConnector(connector.config, dataSource, connector.cbcon);
+				connectors[index].start();
+			}
 		}
 	}
 	
@@ -164,7 +177,7 @@ public class DashBoarController implements Initializable {
 			if(bankProperty == null) return;
 			NPCIConnector connector = null;
 			for (int i = 0; i < connectors.length; i++) {
-				if(connectors[i].getConfig().getAcquirerId().equalsIgnoreCase(bankProperty.getAcqId())) connector = connectors[i];
+				if(connectors[i].config.acquirerId.equalsIgnoreCase(bankProperty.getAcqId())) connector = connectors[i];
 			}
 			if(connector == null) return;
 			else if(connector.isShutdowned() || connector.isInterrupted()) {
@@ -178,14 +191,31 @@ public class DashBoarController implements Initializable {
 		}
 	}
 
+	public class ReStartAction implements EventHandler<ActionEvent> {
+		@Override
+		public void handle(ActionEvent event) {
+			int index = -1; 
+			BankProperty bankProperty =  bankTable.getSelectionModel().getSelectedItem();
+			if(bankProperty == null) return;
+			for (int i = 0; i < connectors.length; i++) {
+				if(connectors[i].config.acquirerId.equalsIgnoreCase(bankProperty.getAcqId())) index = i;
+			}
+			if(index < 0) return;
+			NPCIConnector connector = connectors[index];
+			if(connector == null) return;
+			//connector = new NPCIConnector(connector.config, connector.ds, cbcon);
+		}
+	}
+	
 	public class ContextMouseEvent implements EventHandler<MouseEvent> {
 		@Override
 		public void handle(MouseEvent event) {
 			TableRow<BankProperty> row = lastSelectedRow.get();
 			boolean isBound = false;
 			if(row != null) {
-				Bounds bounds = row.localToScreen(row.getBoundsInLocal());
-				isBound = bounds.contains(new Point2D(event.getSceneX(), event.getScreenY()));
+				Bounds bounds = row.getBoundsInLocal();
+				bounds = row.localToScreen(row.getBoundsInLocal());
+				isBound = bounds.contains(new Point2D(event.getScreenX(), event.getScreenY()));
 			}
 			if(event.getButton() == MouseButton.PRIMARY) {
 				if(row != null) {

@@ -3,20 +3,19 @@ package com.sil.npci.config;
 import com.google.gson.Gson;
 
 public class Bank {
-	private final String acquirerId;
-	private final String bankName;
-	private final boolean isAcquirer;
-	private final boolean isIssuer;
-	private final String acquiringIp;
-	private final int acquiringPort;
-	private final String cbsIp;
-	private final int cbsPort;
-	private final String npciIp;
-	private final int npciPort;
-	private final String dataSourceName;
-	private final String offsetType;
-	private final boolean isActive;
-	
+	public final String acquirerId;
+	public final String bankName;
+	public final boolean isAcquirer;
+	public final boolean isIssuer;
+	public final String acquiringIp;
+	public final int acquiringPort;
+	public final String cbsIp;
+	public final int cbsPort;
+	public final String npciIp;
+	public final int npciPort;
+	public final String dataSourceName;
+	public final String offsetType;
+	public final boolean isActive;
 	
 	public Bank(String acquirerId, String bankName, boolean isAcquirer, boolean isIssuer, String acquiringIp, int acquiringPort, String cbsIp, int cbsPort, String npciIp, int npciPort, String dataSourceName, String offsetType, boolean isActive) {
 		this.acquirerId = acquirerId;
@@ -33,59 +32,6 @@ public class Bank {
 		this.offsetType = offsetType;
 		this.isActive = isActive;
 	}
-	
-	public String getAcquirerId() {
-		return acquirerId;
-	}
-	
-	public String getBankName() {
-		return bankName;
-	}
-	
-	public boolean isAcquirer() {
-		return isAcquirer;
-	}
-	
-	public boolean isIssuer() {
-		return isIssuer;
-	}
-	
-	public String getAcquiringIp() {
-		return acquiringIp;
-	}
-	
-	public int getAcquiringPort() {
-		return acquiringPort;
-	}
-	
-	public String getCbsIp() {
-		return cbsIp;
-	}
-	
-	public int getCbsPort() {
-		return cbsPort;
-	}
-	
-	public String getNpciIp() {
-		return npciIp;
-	}
-	
-	public int getNpciPort() {
-		return npciPort;
-	}
-	
-	public String getDataSourceName() {
-		return dataSourceName;
-	}
-	
-	public String getOffsetType() {
-		return offsetType;
-	}
-	
-	public boolean isActive() {
-		return isActive;
-	}
-	
 	@Override
 	public String toString() {
 		Gson gson = GlobalConfig.GSON_BUILDER.create();

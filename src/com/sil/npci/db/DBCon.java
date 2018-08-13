@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 import org.pmw.tinylog.Logger;
 
-
 public class DBCon {
 
 	public static final String getMaskedPan(String pan) {

@@ -57,6 +57,7 @@ public class DataSourceUtil {
 				hikariConfig.addDataSourceProperty("portNumber", rs.getInt("DATA_SOURCE_PORT"));
 				hikariConfig.addDataSourceProperty("databaseName", rs.getString("CATALOG_NAME"));
 				hikariConfig.setConnectionInitSql(rs.getString("INIT_QUERY"));
+				hikariConfig.setLeakDetectionThreshold(30000);
 				return new HikariDataSource(hikariConfig);
 			}
 		} catch (Exception e) {

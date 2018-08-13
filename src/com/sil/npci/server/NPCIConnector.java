@@ -22,14 +22,6 @@ import com.sil.npci.iso8583.CBSEncoderDecoder;
 import com.sil.npci.iso8583.ISO8583Message;
 import com.sil.npci.iso8583.NPCIEncoderDecoder;
 import com.sil.npci.iso8583.constants.MTI;
-import com.sil.npci.iso8583.constants.POSEntryMode;
-import com.sil.npci.iso8583.constants.TransactionType;
-import com.sil.npci.issuer.ECommercePurchase;
-import com.sil.npci.issuer.FullMagstripePurchase;
-import com.sil.npci.issuer.FullMagstripeReversal;
-import com.sil.npci.issuer.IssuerLogon;
-import com.sil.npci.issuer.IssuerTransaction;
-import com.sil.npci.issuer.QuickEMVPurchase;
 import com.sil.npci.nanolog.Logger;
 import com.sil.npci.nanolog.LoggerFactory;
 import com.sil.npci.util.ByteHexUtil;
@@ -44,7 +36,8 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 
 	public final String[] binlist = new String[30];
 
-	private final Bank			config;
+	public final Bank			config;
+	public final CBSConnector	cbcon;
 	private final LoggerFactory	loggerFactory;
 	private final Logger		npciLogger;
 
@@ -59,7 +52,7 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 	private OutputStream	os;
 
 	private final HikariDataSource				ds;
-	private final CBSConnector					cbcon;
+	
 	private final ScheduledThreadPoolExecutor	schedular	= new ScheduledThreadPoolExecutor(1);
 	private ScheduledFuture<?>					future		= null;
 
@@ -70,18 +63,23 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 		this.config = config;
 		this.ds = ds;
 		this.cbcon = cbcon;
-		loggerFactory = new LoggerFactory(config.getBankName());
-		npciLogger = new Logger(config.getBankName(), config.getBankName());
+		loggerFactory = new LoggerFactory(config.bankName);
+		npciLogger = new Logger(config.bankName, config.bankName);
 		schedular.setRemoveOnCancelPolicy(true);
-		acquirerServer = new AcquirerServer(config.getBankName());
+		acquirerServer = new AcquirerServer(config.bankName);
 	}
 
 
 	public void run() {
 		acquirerServer.setName("acq server");
-		if (config.isAcquirer()) acquirerServer.start();
+		if (config.isAcquirer) {
+			npciLogger.log("starting acquirer server.");
+			acquirerServer.start();
+		}
 		npciLogger.log(config);
+		npciLogger.log("shutdown : "+shutdown);
 		main: while (!shutdown) {
+			npciLogger.log("shutdown : "+shutdown);
 			try {
 				boolean isNPCISocketConnected = initSocket();
 				npciLogger.log("npci socket connection status : " + isNPCISocketConnected);
@@ -94,7 +92,7 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 				}
 
 				while (!shutdown) {
-					npciLogger.log(netmap);
+					npciLogger.log("current logon queue : "+netmap.size());
 					if (socketbreak) {
 						npciLogger.log("continue to main either sockbreak");
 						continue main;
@@ -106,54 +104,7 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 						ISO8583Message issreqres = NPCIEncoderDecoder.decode(bytes);
 						if (issreqres == null || issreqres.get(0) == null) continue;
 						// npciLogger.log("message from npci : " + NPCIEncoderDecoder.log(issreqres));
-						String mti = issreqres.get(0);
-						String pcode = issreqres.get(3) == null ? "" : issreqres.get(3).substring(0, 2);
-						String posEntryMode = issreqres.get(22) == null ? "" : issreqres.get(22).substring(0, 2);
-						// String posConditionCode = isoMessage.get(25) == null ? "" : isoMessage.get(25);
-						if (mti.equals(MTI.NET_MGMT_REQUEST)) {
-							IssuerLogon logonTransaction = new IssuerLogon(npcon, cbcon, ds.getConnection(), issreqres);
-							logonTransaction.start();
-						}
-						else if (MTI.TRANS_REQUEST.equals(mti)) {
-							if (TransactionType.POS_PURCHASE.equals(pcode)) {
-								if (POSEntryMode.ECOMMERCE.equals(posEntryMode)) {
-									IssuerTransaction issuerTransaction = new ECommercePurchase(npcon, cbcon, ds.getConnection(), issreqres);
-									issuerTransaction.start();
-								}
-								else if (POSEntryMode.FULL_MAGSTRIPE.equals(posEntryMode)) {
-									IssuerTransaction issuerTransaction = new FullMagstripePurchase(npcon, cbcon, ds.getConnection(), issreqres);
-									issuerTransaction.start();
-								}
-								else if (POSEntryMode.ICC.equals(posEntryMode)) {
-									IssuerTransaction issuerTransaction = new QuickEMVPurchase(npcon, cbcon, ds.getConnection(), issreqres);
-									issuerTransaction.start();
-								}
-							}
-						}
-						else if (MTI.ISS_REVERSAL_REQUEST.equals(mti)) {
-							if (POSEntryMode.FULL_MAGSTRIPE.equals(posEntryMode)) {
-								IssuerTransaction issuerTransaction = new FullMagstripeReversal(npcon, cbcon, ds.getConnection(), issreqres);
-								issuerTransaction.start();
-							}
-						}
-						else if (mti.equals(MTI.NET_MGMT_RESPONSE) || mti.equals(MTI.TRANS_RESPONSE) || mti.equals(MTI.TRANS_ADVICE_RESPONSE) || mti.equals(MTI.ISR_FILE_UPDT_RESPONSE) || mti.equals(MTI.AUTH_RESPONSE)
-								|| mti.equals(MTI.AUTH_ADVICE_RESPONSE)) {
-							AcquirerTransaction acquirerTransaction = null;
-
-							if (MTI.ISS_REVERSAL_RESPONSE.equals(issreqres.get(0))) acquirerTransaction = revmap.get(issreqres.getKey());
-							else if (MTI.TRANS_RESPONSE.equals(issreqres.get(0))) acquirerTransaction = finmap.get(issreqres.getKey());
-							else if (MTI.NET_MGMT_RESPONSE.equals(issreqres.get(0))) acquirerTransaction = netmap.get(issreqres.getKey());
-							npciLogger.log("acquirerTransaction is null: " + acquirerTransaction == null);
-							if (acquirerTransaction == null) {
-								npciLogger.log("response already commited for npci response : " + issreqres.get(39));
-								continue;
-							}
-							acquirerTransaction.setResponse(issreqres);
-						}
-						else {
-							npciLogger.log("unknown transaction type");
-							npciLogger.log(NPCIEncoderDecoder.log(issreqres));
-						}
+						TransactionDispatcher.inspectAndDispatch(npcon, cbcon, ds, issreqres, npciLogger); 
 					} catch (Exception e) {
 						npciLogger.log("message parsing error");
 						npciLogger.log(e);
@@ -234,7 +185,7 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 		try {
 			return ds.getConnection();
 		} catch (SQLException e) {
-			npciLogger.log("error creating database connection for " + config.getBankName());
+			npciLogger.log("error creating database connection for " + config.bankName);
 			npciLogger.log(e);
 		}
 		return null;
@@ -246,8 +197,8 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 		try {
 			if (socketbreak) {
 				loggedon = false;
-				npciLogger.log("connection to " + config.getNpciIp() + ":" + config.getNpciPort());
-				socket = new Socket(config.getNpciIp(), config.getNpciPort());
+				npciLogger.log("connection to " + config.npciIp + ":" + config.npciPort);
+				socket = new Socket(config.npciIp, config.npciPort);
 				socket.setKeepAlive(true);
 				is = socket.getInputStream();
 				os = socket.getOutputStream();
@@ -286,13 +237,15 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 
 	@Override
 	public void shutdown() {
-		this.shutdown = true;
-		this.loggedoff = true;
-		this.loggedon = false;
-		if (future != null && !future.isCancelled()) future.cancel(true);
-		schedular.shutdown();
-		closeSocket();
-		acquirerServer.shutdown();
+		try {
+			this.shutdown = true;
+			this.loggedoff = true;
+			this.loggedon = false;
+			if (future != null && !future.isCancelled()) npciLogger.log("canceling logon task : "+future.cancel(true));
+			schedular.shutdown();
+			closeSocket();
+			acquirerServer.shutdown();
+		} catch (Exception e) {e.printStackTrace();	}
 	}
 
 
@@ -316,18 +269,16 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 		loggedon = logon;
 	}
 
+	
 	public class AcquirerServer extends Thread implements Shutdownable {
-
 		private ServerSocket ssc = null;
-
 
 		public AcquirerServer(String bankName) {
 			this.setName(bankName + " acquirer");
 		}
 
-
 		public void run() {
-			try(ServerSocket ssc = new ServerSocket(config.getAcquiringPort())) {
+			try(ServerSocket ssc = new ServerSocket(config.acquiringPort)) {
 				this.ssc = ssc;
 				while (!shutdown) {
 					Socket sc = ssc.accept();
@@ -353,6 +304,7 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 		}
 	}
 
+	
 	public class AcquirerTransactionDispatcher extends Thread {
 
 		private final Socket socket;
@@ -410,8 +362,18 @@ public final class NPCIConnector extends Thread implements Shutdownable {
 	}
 
 
-	public Bank getConfig() {
-		return config;
+	public boolean dispatchAcquirerResponse(ISO8583Message response) {
+		AcquirerTransaction acquirerTransaction = null;
+		if (MTI.ISS_REVERSAL_RESPONSE.equals(response.get(0))) acquirerTransaction = revmap.get(response.getKey());
+		else if (MTI.TRANS_RESPONSE.equals(response.get(0))) acquirerTransaction = finmap.get(response.getKey());
+		else if (MTI.NET_MGMT_RESPONSE.equals(response.get(0))) acquirerTransaction = netmap.get(response.getKey());
+		npciLogger.log("acquirerTransaction is null: " + acquirerTransaction == null);
+		if (acquirerTransaction == null) {
+			npciLogger.log("response already commited for npci response : " + response.get(39));
+			return false;
+		}
+		acquirerTransaction.setResponse(response);
+		return true;
 	}
-
+	
 }

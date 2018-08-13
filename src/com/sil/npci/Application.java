@@ -17,14 +17,14 @@ public class Application {
 		NPCIConnector[] connectors = new NPCIConnector[banks.size()];
 		for (int i = 0; i < connectors.length; i++) {
 			Bank bank = banks.get(i);
-			HikariDataSource dataSource = dataSources.get(bank.getBankName());
+			HikariDataSource dataSource = dataSources.get(bank.bankName);
 			if (dataSource == null) {
-				dataSource = DataSourceUtil.getDataSource(bank.getBankName());
-				dataSources.put(bank.getDataSourceName(), dataSource);
+				dataSource = DataSourceUtil.getDataSource(bank.bankName);
+				dataSources.put(bank.dataSourceName, dataSource);
 			}
-			SILCBSConnector cbcon = new SILCBSConnector(bank.getCbsIp(), bank.getCbsPort());
+			SILCBSConnector cbcon = new SILCBSConnector(bank.cbsIp, bank.cbsPort);
 			connectors[i] = new NPCIConnector(bank, dataSource, cbcon);
-			connectors[i].setName(bank.getBankName());
+			connectors[i].setName(bank.bankName);
 			connectors[i].start();
 		}
 

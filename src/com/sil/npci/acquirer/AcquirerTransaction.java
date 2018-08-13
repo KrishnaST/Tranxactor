@@ -51,6 +51,7 @@ public abstract class AcquirerTransaction extends Thread {
 
 
 	public final void run() {
+		if(npcon.isShutdowned()) return;
 		try(Connection connection = this.dbcon; 
 			Logger logger = npcon.getLogger(acqreq == null ? null : acqreq.get(37))) {
 			this.logger = logger;
@@ -72,7 +73,6 @@ public abstract class AcquirerTransaction extends Thread {
 			logger.log("npci response : " + NPCIEncoderDecoder.log(npres));
 			postNPCIResponsetDoCommon();
 			constructAcquirerResonse();
-
 		} catch (Exception e) {
 			logger.log(e);
 		}

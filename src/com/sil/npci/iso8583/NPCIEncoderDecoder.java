@@ -20,7 +20,6 @@ public class NPCIEncoderDecoder {
 	private static final StringBuilder	spaces		= new StringBuilder("                                                          ");
 	private static final int			width		= 50;
 
-
 	public static final ISO8583Message decode(byte[] bytes) throws ParseException {
 		ISO8583Message iso8583Message = new ISO8583Message();
 		int p = 0;

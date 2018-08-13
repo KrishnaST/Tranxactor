@@ -1,6 +1,6 @@
 package com.sil.npci.iso8583.constants;
 
-public class TransactionType {
+public class ProcessingCode {
 
 	public static final String	POS_PURCHASE				= "00";
 	public static final String	ATM_WITHDRAWAL				= "01";
